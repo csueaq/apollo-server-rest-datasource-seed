@@ -1,0 +1,9 @@
+ .DS_Store
+.idea/
+build/
+node_modules/
+out/
+*.iml
+**/build.properties
+.gradle/
+.terraform

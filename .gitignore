@@ -1,0 +1,11 @@
+ .DS_Store
+.idea/
+build/
+node_modules/
+out/
+*.iml
+**/build.properties
+.gradle/
+.terraform
+yarn.lock
+package-lock.json
