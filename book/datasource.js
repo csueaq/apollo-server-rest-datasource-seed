@@ -19,6 +19,14 @@ export class BookAPI extends RESTDataSource {
     async addBook({ title, author} ) {
         return await this.post('book', { title, author })
     }
+
+    async updateBook({ id, title, author} ) {
+        return await this.put('book', { id, title, author })
+    }
+
+    async deleteBook(id) {
+        return await this.delete(`book/${id}`)
+    }
 }
 
 
