@@ -1,7 +1,7 @@
 import { ApolloServer } from 'apollo-server'
 import { allTypeDefs as typeDefs } from './types'
 import { RootQueris as AuthorRootQueries ,Author, AuthorAPI } from './author'
-import { RootQueris as BookRootQueries ,Book, BookAPI } from './book'
+import { RootQueris as BookRootQueries ,Book, BookAPI, Mutation } from './book'
 
 
 
@@ -10,6 +10,9 @@ import { RootQueris as BookRootQueries ,Book, BookAPI } from './book'
 // schema.  We'll retrieve books from the "books" array above.
 const resolvers = {
     Query: { ...AuthorRootQueries, ...BookRootQueries},
+    Mutation: {
+        ...Mutation
+    },
     Author,
     Book
 };

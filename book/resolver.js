@@ -7,3 +7,5 @@ export const books = async( _, _args, { dataSources } ) => await dataSources.boo
 
 
 export const book = async ( _, { id }, { dataSources }) => await dataSources.bookAPI.getBook(id)
+
+export const addBook = async (_, { title, author }, { dataSources }) => await dataSources.bookAPI.addBook( {title, author} )

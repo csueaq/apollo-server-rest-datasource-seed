@@ -1,4 +1,4 @@
-import { author, authors, books } from './resolver'
+import { author, authors, books, book } from './resolver'
 import {AuthorAPI} from './datasource'
 const RootQueris = {
     authors,
@@ -6,7 +6,8 @@ const RootQueris = {
 }
 
 const Author = {
-    books
+    books,
+    book
 }
 
 export  {

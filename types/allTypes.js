@@ -25,6 +25,11 @@ const allTypeDefs = gql`
     id: ID
     name: String
     books: [Book] @cacheControl(maxAge: 240)
+    book(id: ID!): Book
+  }
+  
+  type Mutation {
+    addBook(title: String!, author: String!): Book
   }
 `
 

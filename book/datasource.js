@@ -15,6 +15,10 @@ export class BookAPI extends RESTDataSource {
     async getBooks() {
         return await this.get('books')
     }
+
+    async addBook({ title, author} ) {
+        return await this.post('book', { title, author })
+    }
 }
 
 
