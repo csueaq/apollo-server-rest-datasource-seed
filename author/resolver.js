@@ -1,10 +1,11 @@
 
 
 
-export const books = async ({ books }, _, { dataSources }) => {
+export const books = async ({ id }, _, { dataSources }) => {
 
     let result = []
-    for (const bookId of books) {
+    const bookIds = await dataSources.authorAPI.getBooksByAuthor(id)
+    for (const bookId of bookIds) {
         const book =  await dataSources.bookAPI.getBook(bookId)
         result.push(book)
     }

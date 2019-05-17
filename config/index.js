@@ -1,6 +1,6 @@
 
 
-const API = 'http://127.0.0.1:8080/'
+const API = 'http://api:8080/'
 
 export {
     API

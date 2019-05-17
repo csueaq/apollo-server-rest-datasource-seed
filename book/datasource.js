@@ -1,11 +1,11 @@
-const { RESTDataSource } = require('apollo-datasource-rest');
+const { RESTDataSource, HTTPCache } = require('apollo-datasource-rest');
 
 import { API } from '../config'
 
 export class BookAPI extends RESTDataSource {
     constructor() {
-        super();
-        this.baseURL = API;
+        super()
+        this.baseURL = API
     }
 
     async getBook(id) {
